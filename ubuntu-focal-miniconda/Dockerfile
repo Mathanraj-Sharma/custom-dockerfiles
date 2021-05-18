@@ -34,7 +34,7 @@ RUN conda env create -f $environment
 # config conda 
 RUN conda init bash \
 	&& conda config --set auto_activate_base false \
-	&& echo "conda activate tf-gpu" >> ~/.bashrc
+	&& echo "conda activate example" >> ~/.bashrc
 
 # install git
 RUN apt install -y git
