@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:focal
 
 # environment variables for conda installation
 ENV PATH="/root/miniconda3/bin:${PATH}"

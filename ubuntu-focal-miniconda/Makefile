@@ -1,10 +1,9 @@
 PYTHON_ENVIRONMENT:=./environment.yml
 
 all:
-	docker --version
+	make docker_build docker_run
 
 docker_build: ./Dockerfile ./environment.yml
-	echo $(NVIDIA)
 	docker build -t handwash:lts -f ./Dockerfile --build-arg environment=$(PYTHON_ENVIRONMENT) .
 	
 .PHONY: docker_run
